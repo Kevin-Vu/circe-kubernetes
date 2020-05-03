@@ -29,4 +29,4 @@ spec:
               configMapKeyRef:
                 name: hostname-config
                 key: postgres_host
-        image: gcr.io/constant-rig-275519/circe-spring:v1
+        image: gcr.io/<SOMETHING>/circe-spring:v1
