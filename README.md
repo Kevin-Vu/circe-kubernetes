@@ -124,7 +124,7 @@ $ kubectl create -f ingress/circe-gke-cert.yml
 Note : we use the GKE to generate a certificate, there are other ways to do that with Let's encrypt and Nginx.  
 GKE is by far the easiest way.
 
-3. Create an Ingress object
+3. Create the Ingress
 ```
 $ kubectl create -f ingress/circe-ingress.yml
 ```
