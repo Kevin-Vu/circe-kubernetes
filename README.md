@@ -144,4 +144,4 @@ Wait until in the first console **PROVISIONING** become **ACTIVE** and in the se
 
 5. Access your application with your favorite browser using your domaine name.  
 Here is the final result with the domain **circe.live**
-<img src="Capture.PNG" width="750">
+<img src="desktop.png" width="750">
