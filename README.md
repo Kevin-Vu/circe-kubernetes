@@ -142,4 +142,6 @@ $ watch kubectl describe ing circe-ingress
 
 Wait until in the first console **PROVISIONING** become **ACTIVE** and in the second console **UNKNOWN** become **HEALTHY**
 
-5. Access your application with your favorite browser using your domaine name.
+5. Access your application with your favorite browser using your domaine name.  
+Here is the final result with the domain **circe.live**
+<img src="Capture.PNG" width="750">
