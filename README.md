@@ -1,5 +1,5 @@
 # circe-kubernetes
-Deploy [circe-angular](https://github.com/Kevin-Vu/circe-angular) and [circe-spring-boot](https://github.com/Kevin-Vu/circe-spring-boot) with GKE.
+Deploy [circe-angular](https://github.com/Kevin-Vu/circe-angular) and [circe-spring-boot](https://github.com/Kevin-Vu/circe-spring-boot) with GKE.  
 All of these commands are performed in the Google Cloud Console which already has Maven, Docker and Git installed.
 
 ## Prerequisites
