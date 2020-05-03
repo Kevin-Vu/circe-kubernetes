@@ -116,7 +116,7 @@ $ kubectl apply -f gke-managed-certs/deploy/managed-certificate-controller.yaml
 $ kubectl get managedcertificates # it should return something like 'No ressource found'
 ```
 
-2. Generate a certicate for your domains  
+2. Generate a certificate for your domains  
 Add all your domains name in `ingress/circe-gke-cert.yml`
 ```
 $ kubectl create -f ingress/circe-gke-cert.yml
