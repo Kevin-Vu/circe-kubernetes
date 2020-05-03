@@ -126,15 +126,15 @@ GKE is by far the easiest way.
 
 3. Create an Ingress object
 ```
-$ kubectl create -f ingress/circe-ingress/yml
+$ kubectl create -f ingress/circe-ingress.yml
 ```
 
 4. Open a second console  
-- One the first console
+- On the first one
 ```
 $ watch kubectl describe managedcertificate circe-gke-cert
 ```
-- One the second console
+- On the second one
 ```
 $ watch kubectl describe ing circe-ingress
 ```
