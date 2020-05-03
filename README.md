@@ -33,7 +33,8 @@ Note : all the postgres yml files can be merged into one single file
 ## Deploy Spring Boot on Kubernetes
 1. Package the Spring-Boot project
 ```
-$ git clone https://github.com/Kevin-Vu/circe-spring-boot.git 
+$ git clone https://github.com/Kevin-Vu/circe-spring-boot.git
+$ mv -f circe-spring-boot/src/main/resources/{application-prod,application}.properties
 $ mvn -DskipTests -f circe-spring-boot/pom.xml package
 ```
 
