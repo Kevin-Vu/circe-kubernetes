@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: circe-ingress
@@ -6,6 +6,7 @@ metadata:
     kubernetes.io/ingress.class: "gce"
     kubernetes.io/ingress.global-static-ip-name: circe-ip
     networking.gke.io/managed-certificates: circe-gke-cert
+    kubernetes.io/ingress.allow-http: "false"
 spec:  
   backend:
     serviceName: circe-angular-service
