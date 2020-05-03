@@ -4,5 +4,6 @@ metadata:
   name: circe-gke-cert
 spec:
   domains:
-    - circe.live
-    - www.circe.live
+    - mydomain.com
+    - www.mydomain.com
+    - etc ...
