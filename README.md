@@ -99,7 +99,7 @@ $ gcloud compute addresses describe circe-ip --global # Note the ip address
 
 3. Follow the google tutorial to register your domain with an IP address at  
 `https://cloud.google.com/dns/docs/quickstart?hl=en`  
-Then go to sleep because it takes about one day to two.
+After finishing it, go to sleep because it takes about one day to two for the IP to get fixed to the domain name
 
 4. Test that your domain has your static ip with a ping
 
