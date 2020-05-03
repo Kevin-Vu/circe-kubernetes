@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: circe-angular
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: circe-angular
+      labels:
+        app: circe-angular
+    spec:
+      containers:
+      - name: circe-angular
+        image: gcr.io/constant-rig-275519/circe-angular:v1
+        ports:
+        - containerPort: 80    
