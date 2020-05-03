@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: circe-ingress
+  annotations:
+    kubernetes.io/ingress.class: "gce"
+    kubernetes.io/ingress.global-static-ip-name: circe-ip
+    networking.gke.io/managed-certificates: circe-gke-cert
+spec:  
+  backend:
+    serviceName: circe-angular-service
+    servicePort: 80
+  rules:
+    - host: circe.live
+    - http:
+        paths:
+        - path: /*
+          backend:
+            serviceName: circe-angular-service
+            servicePort: 80
+        - path: /api/*
+          backend:
+            serviceName: circe-spring-boot-service
+            servicePort: 80     
