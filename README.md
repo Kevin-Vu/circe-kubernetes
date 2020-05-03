@@ -121,7 +121,8 @@ Add all your domains name in `ingress/circe-gke-cert.yml`
 ```
 $ kubectl create -f ingress/circe-gke-cert.yml
 ```
-Note : we use the GKE to generate a certificate, there are other ways to do that with Let's encrypy and Nginx. GKE is by far the easiest way.
+Note : we use the GKE to generate a certificate, there are other ways to do that with Let's encrypt and Nginx.  
+GKE is by far the easiest way.
 
 3. Create an Ingress object
 ```
