@@ -90,7 +90,7 @@ $ kubectl create -f services/circe-angular-service.yml
 ```
 
 ## Get a domain name with an IP address
-1. Buy a domain name at `https://domains.google.com/m/registrar/`
+1. Buy a domain name at [Google Domain](https://domains.google.com/m/registrar/)
 
 2. Get a static ip address
 ```
@@ -98,8 +98,7 @@ $ gcloud compute addresses create circe-ip --global
 $ gcloud compute addresses describe circe-ip --global # Note the ip address
 ```
 
-3. Follow the google tutorial to register your domain with an IP address at  
-`https://cloud.google.com/dns/docs/quickstart?hl=en`  
+3. Follow the [Google Cloud tutorial](https://cloud.google.com/dns/docs/quickstart?hl=en) to register your domain with an IP address   
 After finishing it, go to sleep because it takes about one day to two for the IP to get fixed to the domain name
 
 4. Test that your domain has your static ip with a ping
