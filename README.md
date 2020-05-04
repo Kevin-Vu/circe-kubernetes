@@ -107,7 +107,7 @@ After finishing it, go to sleep because it takes about one day to two for the IP
 ## Expose your app to the world with HTTPS
 1. If you have Kubernetes 1.15 or above you should be able to perform this command 
 ```
-$ kubectl get managedcertificates # it should return something like 'No ressource found'
+$ kubectl get managedcertificates # it should return something like 'No resource found'
 ```
 **ONLY** If not, install CRD
 ```
