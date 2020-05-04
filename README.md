@@ -47,7 +47,7 @@ $ gcloud services enable containerregistry.googleapis.com
 ```
 $ mvn -DskipTests com.google.cloud.tools:jib-maven-plugin:build -Dimage=gcr.io/$GOOGLE_CLOUD_PROJECT/circe-spring:v1
 ```
-On Google Cloud Platform in the **Container Registry**, note the link of the image you have created, it should look like `gcr.io/<SOMETHING>/circe-spring`
+The image is available in your Google Cloud Platform, in the **Container Registry** section.
 
 4. Create a Configmap with the hostname of postgres
 ```
@@ -55,13 +55,13 @@ $ kubectl create configmap hostname-config --from-literal=postgres_host=$(kubect
 ```
 
 5. Create the Deployment for spring-boot  
-Replace `<SOMETHING>` in `deployments/circe-spring-boot-deployment.yml` by the one you note in the step 3.
+Replace `<SOMETHING>` in `deployments/circe-spring-boot-deployment.yml` by the value of `$GOOGLE_CLOUD_PROJECT`.
 ```
 $ kubectl create -f deployments/circe-spring-boot-deployment.yml
 $ kubectl get pods # to see the created pods for postgres
 $ kubectl logs -f <FULLNAME OF THE SPRING POD> # to see if the spring starts well
 ```
-Note : in this deployment yml we specify only one replica, you can set it to more to scale your application
+Note : in this deployment yml we specify only one replica, you can set it (now or later) to more to scale your application
 
 6. Create a Service to internally expose spring-boot
 ```
@@ -73,13 +73,13 @@ $ kubectl create -f services/circe-spring-boot-service.yml
 ```
 $ git clone https://github.com/Kevin-Vu/circe-angular.git
 $ cd circe-angular && docker build -t circe-angular . && cd .. 
-$ docker tag circe-angular gcr.io/<SOMETHING>/circe-angular:v1
-$ docker push gcr.io/<SOMETHING>/circe-angular:v1
+$ docker tag circe-angular gcr.io/$GOOGLE_CLOUD_PROJECT/circe-angular:v1
+$ docker push gcr.io/$GOOGLE_CLOUD_PROJECT/circe-angular:v1
 ```
 Note : there is a more elegant way to perform the build using -f...
 
 2. Create the Deployment for angular  
-Replace `<SOMETHING>` in `deployments/circe-angular-deployment.yml`.
+Replace `<SOMETHING>` in `deployments/circe-angular-deployment.yml` by the value of `$GOOGLE_CLOUD_PROJECT`.
 ```
 $ kubectl create -f deployments/circe-angular-deployment.yml
 ```
